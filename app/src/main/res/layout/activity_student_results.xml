@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--        <TextView-->
+<!--           android:text="Results"-->
+<!--            android:textSize="26sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#1B5E20"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+        <TextView
+            android:text="Choose Year *"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/spinnerYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Choose Semester *"
+            android:textStyle="bold"
+            android:layout_marginTop="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/spinnerSemester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnViewResult"
+            android:text="View Result"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lavender"/>
+
+        <!-- CERTIFICATE -->
+        <LinearLayout
+            android:id="@+id/layoutResult"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:background="#000000"
+            android:padding="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvStudentInfo"
+                android:textColor="#2E8A1C"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- TABLE HEADER -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:background="#BED1BE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:text="Subject" android:layout_weight="3" android:textSize="12sp" android:layout_width="0dp" android:textStyle="bold" android:layout_height="wrap_content"/>
+                <TextView android:text="Credit" android:layout_weight="2" android:textSize="12sp" android:layout_width="0dp" android:textStyle="bold" android:layout_height="wrap_content"/>
+                <TextView android:text="Grade" android:layout_weight="2" android:textSize="12sp" android:layout_width="0dp" android:textStyle="bold" android:layout_height="wrap_content"/>
+                <TextView android:text="Points" android:layout_weight="2" android:textSize="12sp" android:layout_width="0dp" android:textStyle="bold" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSubjects"
+                android:layout_width="match_parent"
+                android:textSize="13sp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvCgpa"
+                android:textStyle="bold"
+                android:textColor="#2E8A1C"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDownload"
+            android:text="Download Result (PDF)"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/lavender"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

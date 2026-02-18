@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
@@ -8,25 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
 
+        <!-- ADMIN FLOW -->
         <activity android:name=".admin.AdminLoginActivity"/>
         <activity android:name=".admin.AdminDashboardActivity"/>
 
+        <!-- FACULTY FLOW -->
         <activity android:name=".faculty.FacultyLoginActivity"/>
         <activity android:name=".faculty.FacultyDashboardActivity"/>
 
+        <!-- STUDENT FLOW -->
         <activity android:name=".student.StudentLoginActivity"/>
         <activity android:name=".student.StudentDashboardActivity"/>
+        <activity android:name=".student.StudentResultsActivity"/>
 
-
-
+        <!-- MAIN / LAUNCHER -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
     </application>
+
 </manifest>

@@ -1,13 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:gravity="center"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@android:color/transparent">
 
+    <!-- Greeting -->
     <TextView
-        android:id="@+id/tvStudentInfo"
-        android:textSize="22sp"
-        android:textStyle="bold"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/textPrimary"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_profile_placeholder"
+        android:scaleType="centerCrop" />
+
+    <!-- Dashboard Grid -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:useDefaultMargins="true">
+
+        <!-- ATTENDANCE -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAttendance"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_attendance" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attendance"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="14dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- FEE PAYMENT -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFee"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_fee" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="14dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ACHIEVEMENT -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAchievement"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_achievement" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/achievement"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="14dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- RESULTS -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardResults"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_results" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/results"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="14dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- LOST & FOUND -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardLostFound"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_lost_found" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lost_and_found"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="14dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SPORTS -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSports"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_sports" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sports"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="14dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
 </LinearLayout>

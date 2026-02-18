@@ -33,12 +33,16 @@ android {
 
 dependencies {
 
+    implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.0")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.16.0")
 
     // Firebase BOM
-    implementation(platform("com.google.firebase:firebase-bom:34.7.0"))
+    implementation(platform("com.google.firebase:firebase-bom:34.8.0"))
+    //implementation(platform("com.google.firebase:firebase-bom:34.7.0"))
     // Firebase services
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-database")

@@ -5,13 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Logo -->
+    <ImageView
+        android:src="@drawable/gvplogo"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="18dp"
+        android:contentDescription="@string/college_logo" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/admin_login"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#2E2E2E"
+        android:layout_marginBottom="22dp" />
+
+
+<!--    Email-->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Admin Email"
         android:inputType="textEmailAddress"/>
-
+<!--password-->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
@@ -20,10 +40,21 @@
         android:inputType="textPassword"
         android:layout_marginTop="12dp"/>
 
+    <!-- Forgot Password -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forget_password"
+        android:textSize="14sp"
+        android:textColor="#7E57C2"
+        android:layout_marginBottom="20dp" />
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Admin Login"
-        android:layout_marginTop="20dp"/>
+        android:text="@string/login"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/lavender"
+        android:radius="16dp"/>
 </LinearLayout>

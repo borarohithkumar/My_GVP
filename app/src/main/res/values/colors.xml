@@ -17,8 +17,17 @@
     <color name="textPrimary">#1F1F1F</color>
     <color name="textSecondary">#666666</color>
     <color name="hintText">#9E9E9E</color>
-
+    <color name="text_dark">#333333</color>
+    <color name="text_white">#FFFFFF</color>
     <!-- Buttons -->
     <color name="buttonText">#FFFFFF</color>
+
+    <color name="lavender">#C6B7E2</color>
+    <color name="lavender_dark">#A594D6</color>
+    <color name="lavender_light">#EDE7F6</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray_input">#F3F3F3</color>
 
 </resources>
