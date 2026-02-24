@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.bumptech.glide.Glide;
+import com.example.mygvp.LostAndFoundActivity;
 import com.example.mygvp.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -63,7 +64,7 @@ public class StudentDashboardActivity extends AppCompatActivity {
         setupDashboardClicks();
     }
 
-    // 🔹 Load student name & profile image
+    // Load student name & profile image
     private void loadStudentProfile() {
 
         studentRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -106,10 +107,10 @@ public class StudentDashboardActivity extends AppCompatActivity {
         });
     }
 
-    // 🔹 Dashboard navigation
+    // Navigate to the Dashboard
     private void setupDashboardClicks() {
 
-        // ✅ RESULTS (THIS WILL NOW WORK)
+        // Navigate to the student results
         cardResults.setOnClickListener(v -> {
             Intent intent = new Intent(
                     StudentDashboardActivity.this,
@@ -129,8 +130,11 @@ public class StudentDashboardActivity extends AppCompatActivity {
         cardAchievement.setOnClickListener(v ->
                 Toast.makeText(this, "Achievements – Coming Soon", Toast.LENGTH_SHORT).show());
 
-        cardLostFound.setOnClickListener(v ->
-                Toast.makeText(this, "Lost & Found – Coming Soon", Toast.LENGTH_SHORT).show());
+        // Navigate to the Lost and Found UI
+        cardLostFound.setOnClickListener(v -> {
+            Intent intent = new Intent(StudentDashboardActivity.this, LostAndFoundActivity.class);
+            startActivity(intent);
+        });
 
         cardSports.setOnClickListener(v ->
                 Toast.makeText(this, "Sports – Coming Soon", Toast.LENGTH_SHORT).show());

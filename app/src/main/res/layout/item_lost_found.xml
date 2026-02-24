@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/ivItemPhoto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:background="#E0E0E0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvItemTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Item Title"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnAction"
+            app:layout_constraintStart_toEndOf="@id/ivItemPhoto"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_edit_icon"
+            app:layout_constraintBottom_toBottomOf="@id/btnAction"
+            app:layout_constraintEnd_toStartOf="@id/btnAction"
+            app:layout_constraintTop_toTopOf="@id/btnAction"
+            app:tint="#757575" />
+
+        <Button
+            android:id="@+id/btnAction"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Contact"
+            android:textColor="#4CAF50"
+            android:textSize="10sp"
+            app:cornerRadius="15dp"
+            app:strokeColor="#4CAF50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvItemStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#FFCDD2"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:text="LOST"
+            android:textColor="#B71C1C"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvItemTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvItemTitle" />
+
+        <TextView
+            android:id="@+id/tvUploaderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="by Student"
+            android:textSize="12sp"
+            android:textColor="#555"
+            app:layout_constraintBottom_toBottomOf="@id/tvItemStatus"
+            app:layout_constraintStart_toEndOf="@id/tvItemStatus"
+            app:layout_constraintTop_toTopOf="@id/tvItemStatus" />
+
+        <TextView
+            android:id="@+id/tvTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="• just now"
+            android:textSize="11sp"
+            android:textColor="#999999"
+            app:layout_constraintBottom_toBottomOf="@id/tvUploaderName"
+            app:layout_constraintStart_toEndOf="@id/tvUploaderName"
+            app:layout_constraintTop_toTopOf="@id/tvUploaderName" />
+
+        <TextView
+            android:id="@+id/tvItemMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Message goes here..."
+            android:textColor="#333333"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvItemTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvItemStatus" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
