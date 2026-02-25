@@ -26,7 +26,6 @@ public class StudentLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // ✅ MUST load correct layout
         setContentView(R.layout.activity_student_login);
 
         // Views
@@ -54,7 +53,7 @@ public class StudentLoginActivity extends AppCompatActivity {
             return;
         }
 
-        // 🔑 READ STUDENTS DATA ONCE
+        // READ STUDENTS' DATA ONCE
         studentsRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
@@ -73,6 +72,18 @@ public class StudentLoginActivity extends AppCompatActivity {
 
                         String rollNo = studentSnap.getKey(); // roll number
 
+                        // grab the student's name from the database (fallback to "Student" if not found)
+                        String studentName = studentSnap.child("name").getValue(String.class);
+                        if (studentName == null || studentName.isEmpty()) {
+                            studentName = "Student";
+                        }
+
+                        android.content.SharedPreferences prefs = getSharedPreferences("MyGVP_UserPrefs", MODE_PRIVATE);
+                        android.content.SharedPreferences.Editor editor = prefs.edit();
+                        editor.putString("LOGGED_IN_ROLL_NO", rollNo);
+                        editor.putString("LOGGED_IN_NAME", studentName);
+                        editor.apply();
+
                         Toast.makeText(StudentLoginActivity.this,
                                 "Login successful",
                                 Toast.LENGTH_SHORT).show();
@@ -83,7 +94,7 @@ public class StudentLoginActivity extends AppCompatActivity {
                         );
                         intent.putExtra("rollNo", rollNo);
 
-                        // ❌ prevent going back to login
+                        // prevent going back to login
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
                         startActivity(intent);
