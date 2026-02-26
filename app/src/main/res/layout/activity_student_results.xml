@@ -45,6 +45,7 @@
         <Button
             android:id="@+id/btnViewResult"
             android:text="View Result"
+            android:textColor="#000000"
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,7 +56,7 @@
             android:id="@+id/layoutResult"
             android:visibility="gone"
             android:orientation="vertical"
-            android:background="#000000"
+            android:background="#E7F2DC"
             android:padding="16dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
@@ -71,8 +72,8 @@
             <!-- TABLE HEADER -->
             <LinearLayout
                 android:orientation="horizontal"
-                android:padding="4dp"
-                android:background="#BED1BE"
+                android:padding="1dp"
+                android:background="#D1FBD1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -100,6 +101,7 @@
         <Button
             android:id="@+id/btnDownload"
             android:text="Download Result (PDF)"
+            android:textColor="#000000"
             android:visibility="gone"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"

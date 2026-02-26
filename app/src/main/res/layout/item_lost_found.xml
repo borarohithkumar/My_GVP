@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp">
+        android:padding="18dp">
 
         <ImageView
             android:id="@+id/ivItemPhoto"
@@ -30,7 +30,7 @@
             android:layout_marginEnd="8dp"
             android:text="Item Title"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/btnAction"
             app:layout_constraintStart_toEndOf="@id/ivItemPhoto"
@@ -42,7 +42,7 @@
             android:layout_height="35dp"
             android:layout_marginEnd="8dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
+            android:padding="10dp"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_edit_icon"
             app:layout_constraintBottom_toBottomOf="@id/btnAction"
@@ -59,11 +59,11 @@
             android:insetBottom="0dp"
             android:text="Contact"
             android:textColor="#4CAF50"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:cornerRadius="15dp"
-            app:strokeColor="#4CAF50"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#4CAF50" />
 
         <TextView
             android:id="@+id/tvItemStatus"
@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:text="• just now"
-            android:textSize="11sp"
+            android:textSize="12sp"
             android:textColor="#999999"
             app:layout_constraintBottom_toBottomOf="@id/tvUploaderName"
             app:layout_constraintStart_toEndOf="@id/tvUploaderName"

@@ -12,7 +12,7 @@
         android:id="@+id/toggleGroupFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         app:singleSelection="true"
         app:selectionRequired="true"
         app:checkedButton="@+id/btnFilterAll"
@@ -69,7 +69,7 @@
         android:layout_marginBottom="24dp"
         android:contentDescription="Report Lost or Found Item"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@color/black"
+        app:backgroundTint="@color/lavender"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/white" />
