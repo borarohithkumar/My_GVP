@@ -24,6 +24,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.example.mygvp.UploadAchievementActivity;
 
 public class StudentDashboardActivity extends AppCompatActivity {
 
@@ -113,6 +114,10 @@ public class StudentDashboardActivity extends AppCompatActivity {
 
         cardAchievement.setOnClickListener(v -> {
             Toast.makeText(this, "Opening Achievement Upload...", Toast.LENGTH_SHORT).show();
+
+            // Use the explicit Class name
+            Intent intent = new Intent(this, UploadAchievementActivity.class);
+            startActivity(intent);
         });
 
         cardLostFound.setOnClickListener(v -> {

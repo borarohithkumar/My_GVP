@@ -96,7 +96,7 @@
                 android:textStyle="bold"
                 app:backgroundTint="#C6B7E2"
                 app:cornerRadius="25dp"
-                app:elevation="8dp" />
+                app:elevation="15dp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
