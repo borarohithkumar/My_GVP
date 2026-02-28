@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:text="@string/admin_login"
+        android:textSize="16sp"
         android:backgroundTint="@color/lavender"
         android:textColor="@color/black"
         android:radius="16dp"/>
@@ -38,8 +39,9 @@
     <Button
         android:id="@+id/btnFaculty"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="52dp"
         android:text="@string/faculty_login"
+        android:textSize="16sp"
         android:backgroundTint="@color/lavender"
         android:textColor="@color/black"
         android:layout_marginTop="12dp"
@@ -50,6 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:text="@string/student_login"
+        android:textSize="16sp"
         android:backgroundTint="@color/lavender"
         android:textColor="@color/black"
         android:layout_marginTop="12dp"
