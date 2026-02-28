@@ -48,7 +48,7 @@ public class LostAndFoundActivity extends AppCompatActivity {
     private Uri selectedImageUri = null;
     private ImageView dialogImageViewPreview;
     private DatabaseReference databaseReference;
-    private final String IMGBB_API_KEY = "c1f3c10ea2a0b2c488bc79f65debf52f";
+    private String IMGBB_API_KEY;
 
     private final ActivityResultLauncher<Intent> imagePickerLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -64,6 +64,7 @@ public class LostAndFoundActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        IMGBB_API_KEY = getString(R.string.imgbb_api_key);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost_found);
 
