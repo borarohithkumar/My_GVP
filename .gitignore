@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+app/build
+# Hide API keys
+app/src/main/res/values/keys.xml
